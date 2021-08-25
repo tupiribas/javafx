@@ -2,7 +2,9 @@ package gui;
 
 import java.util.Locale;
 
+import gui.util.Alerts;
 import javafx.fxml.FXML;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -31,35 +33,63 @@ public class ViewController {
 	private Button btDiv;
 	
 	public void calculateSum() {
-		Locale.setDefault(Locale.US);
-		double value1 = Double.parseDouble(txtNumber1.getText());
-		double value2 = Double.parseDouble(txtNumber2.getText());
-		double sum = value1 + value2;
-		labelResult.setText(String.format("%.2f", sum));;
+		try {
+			Locale.setDefault(Locale.US);
+			double value1 = Double.parseDouble(txtNumber1.getText());
+			double value2 = Double.parseDouble(txtNumber2.getText());
+			double sum = value1 + value2;
+			labelResult.setText(String.format("%.2f", sum));
+		}
+		catch (NumberFormatException e) {
+			labelResult.setText("ERROR");
+			Alerts.showAlert("Error cod.:01", null, "Try typing a number like: -3, -2, -1, 0, 1, 2, 3"
+					, AlertType.ERROR);
+		}
 	}
 	
 	public void calculateSub() {
-		Locale.setDefault(Locale.US);
-		double value1 = Double.parseDouble(txtNumber1.getText());
-		double value2 = Double.parseDouble(txtNumber2.getText());
-		double sub = value1 - value2;
-		labelResult.setText(String.format("%.2f", sub));
+		try {
+			Locale.setDefault(Locale.US);
+			double value1 = Double.parseDouble(txtNumber1.getText());
+			double value2 = Double.parseDouble(txtNumber2.getText());
+			double sub = value1 - value2;
+			labelResult.setText(String.format("%.2f", sub));
+		}
+		catch (NumberFormatException e) {
+			labelResult.setText("ERROR");
+			Alerts.showAlert("Error cod.:02", null, "Try typing a number like: -3, -2, -1, 0, 1, 2, 3"
+					, AlertType.ERROR);
+		}
 	}
 	
 	public void calculateMult() {
-		Locale.setDefault(Locale.US);
-		double value1 = Double.parseDouble(txtNumber1.getText());
-		double value2 = Double.parseDouble(txtNumber2.getText());
-		double mult = value1 * value2;
-		labelResult.setText(String.format("%.2f", mult));
+		try {
+			Locale.setDefault(Locale.US);
+			double value1 = Double.parseDouble(txtNumber1.getText());
+			double value2 = Double.parseDouble(txtNumber2.getText());
+			double mult = value1 * value2;
+			labelResult.setText(String.format("%.2f", mult));
+		}
+		catch (NumberFormatException e) {
+			labelResult.setText("ERROR");
+			Alerts.showAlert("Error cod.:03", null, "Try typing a number like: -3, -2, -1, 0, 1, 2, 3"
+					, AlertType.ERROR);
+		}
 	}
 	
 	public void calculateDiv() {
-		Locale.setDefault(Locale.US);
-		double value1 = Double.parseDouble(txtNumber1.getText());
-		double value2 = Double.parseDouble(txtNumber2.getText());
-		double div = value1 / value2;
-		labelResult.setText(String.format("%.2f", div));
+		try {
+			Locale.setDefault(Locale.US);
+			double value1 = Double.parseDouble(txtNumber1.getText());
+			double value2 = Double.parseDouble(txtNumber2.getText());
+			double div = value1 / value2;
+			labelResult.setText(String.format("%.2f", div));
+		}
+		catch (NumberFormatException e) {
+			labelResult.setText("ERROR");
+			Alerts.showAlert("Error cod.:04", null, "Try typing a number like: -3, -2, -1, 0, 1, 2, 3"
+					, AlertType.ERROR);
+		}
 	}
 
 }

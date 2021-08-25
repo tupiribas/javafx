@@ -9,7 +9,7 @@
 <?import javafx.scene.paint.Stop?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ViewController">
+<AnchorPane prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ViewController">
    <children>
       <Label accessibleHelp="Calculate Sun" accessibleText="Calculate Sun" contentDisplay="BOTTOM" layoutX="49.0" layoutY="46.0" prefHeight="35.0" prefWidth="227.0" snapToPixel="false" text="Calculate Sum" textAlignment="JUSTIFY" textOverrun="CLIP">
          <font>
