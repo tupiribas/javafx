@@ -7,7 +7,8 @@
 <AnchorPane prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ViewController">
    <children>
       <Label layoutX="168.0" layoutY="124.0" text="Olá mundo!" />
-      <Button fx:id="btTeste" layoutX="174.0" layoutY="150.0" mnemonicParsing="false" onAction="#onbtTesteAction" text="Button" />
+      <Button fx:id="btTeste" layoutX="151.0" layoutY="150.0" mnemonicParsing="false" onAction="#onbtTesteAction" text="Troca de nome" />
       <Label fx:id="lbTeste" layoutX="168.0" layoutY="189.0" prefHeight="17.0" prefWidth="64.0" />
+      <Button layoutX="174.0" layoutY="244.0" mnemonicParsing="false" onAction="#onbtTestActionAlert" text="Alerta" />
    </children>
 </AnchorPane>
