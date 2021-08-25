@@ -2,13 +2,108 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ViewController">
+<AnchorPane prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gui.ViewController">
    <children>
-      <Label layoutX="168.0" layoutY="124.0" text="Olá mundo!" />
-      <Button fx:id="btTeste" layoutX="151.0" layoutY="150.0" mnemonicParsing="false" onAction="#onbtTesteAction" text="Troca de nome" />
-      <Label fx:id="lbTeste" layoutX="168.0" layoutY="189.0" prefHeight="17.0" prefWidth="64.0" />
-      <Button layoutX="174.0" layoutY="244.0" mnemonicParsing="false" onAction="#onbtTestActionAlert" text="Alerta" />
+      <Label accessibleHelp="Calculate Sun" accessibleText="Calculate Sun" contentDisplay="BOTTOM" layoutX="49.0" layoutY="46.0" prefHeight="35.0" prefWidth="227.0" snapToPixel="false" text="Calculate Sum" textAlignment="JUSTIFY" textOverrun="CLIP">
+         <font>
+            <Font name="Calibri" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtNumber1" layoutX="49.0" layoutY="90.0" promptText="First number" />
+      <TextField fx:id="txtNumber2" layoutX="49.0" layoutY="127.0" promptText="Secound number" />
+      <Button fx:id="btSun" layoutX="49.0" layoutY="172.0" mnemonicParsing="false" onAction="#calculateSum" text="Sum">
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <font>
+            <Font name="Calibri Bold" size="15.0" />
+         </font>
+      </Button>
+      <Label layoutX="48.0" layoutY="255.0" prefHeight="17.0" prefWidth="47.0" snapToPixel="false" text="Result =" />
+      <Label layoutX="94.0" layoutY="255.0" />
+      <Label fx:id="labelResult" layoutX="95.0" layoutY="255.0" />
+      <Button fx:id="btSub" layoutX="115.0" layoutY="172.0" mnemonicParsing="false" onAction="#calculateSub" text="Subtraction">
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <font>
+            <Font name="Calibri Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btMult" layoutX="222.0" layoutY="172.0" mnemonicParsing="false" onAction="#calculateMult" text="Multiplication">
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <font>
+            <Font name="Calibri Bold" size="15.0" />
+         </font>
+      </Button>
+      <Button fx:id="btDiv" layoutX="49.0" layoutY="218.0" mnemonicParsing="false" onAction="#calculateDiv" text="Division">
+         <textFill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </textFill>
+         <font>
+            <Font name="Calibri Bold" size="15.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
