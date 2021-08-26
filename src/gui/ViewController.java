@@ -1,15 +1,18 @@
 package gui;
 
+import java.net.URL;
 import java.util.Locale;
+import java.util.ResourceBundle;
 
 import gui.util.Alerts;
 import javafx.fxml.FXML;
+import javafx.fxml.Initializable;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 
-public class ViewController {
+public class ViewController implements Initializable {
 
 	@FXML
 	private TextField txtNumber1;
@@ -19,6 +22,9 @@ public class ViewController {
 
 	@FXML
 	private Label labelResult;
+	
+	@FXML 
+	public Label labelMensageError;
 
 	@FXML
 	private Button btSun;
@@ -42,8 +48,10 @@ public class ViewController {
 		}
 		catch (NumberFormatException e) {
 			labelResult.setText("ERROR");
-			Alerts.showAlert("Error cod.:01", null, "Try typing a number like: -3, -2, -1, 0, 1, 2, 3"
-					, AlertType.ERROR);
+			String[] i = e.getMessage().split(" ");
+			Alerts.showAlert("Error cod.:01", null, "Your mistake was: " + i[3] + 
+					"\nTry typing a number like: ... -3 or, -2 or, -1 or, 0 or, 1 or, 2 or, 3 or ..."
+					, AlertType.ERROR);           
 		}
 	}
 	
@@ -90,6 +98,15 @@ public class ViewController {
 			Alerts.showAlert("Error cod.:04", null, "Try typing a number like: -3, -2, -1, 0, 1, 2, 3"
 					, AlertType.ERROR);
 		}
+	}
+
+	@Override
+	public void initialize(URL url, ResourceBundle rb) {
+		Constraints.setTextFieldDouble(txtNumber1);
+		Constraints.setTextFieldDouble(txtNumber2);
+		Constraints.setFieldMaxLength(txtNumber1, 12);
+		Constraints.setFieldMaxLength(txtNumber2, 12);
+		
 	}
 
 }
